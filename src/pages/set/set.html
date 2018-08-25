@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Set Walabot parameters</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<p>
+  This page to define the profile and arena for Walabot. Enable or disable Walabot to send event to IFTTT services
+</p>
+<ion-content padding class="outer-content">
+  <ion-list>
+    <ion-list-header>
+      Radius
+    </ion-list-header>
+    <ion-item>
+      <ion-range dualKnobs="true" min=1 max=100 pin="true" [(ngModel)]="radius">
+        <ion-label range-left>1</ion-label>
+        <ion-label range-right>100</ion-label>
+      </ion-range>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>
+      theta
+    </ion-list-header>
+    <ion-item>
+      <ion-range dualKnobs="true" min="0" max="90" pin="true" [(ngModel)]="theta" color="secondary">
+          <ion-label range-left>0</ion-label>
+          <ion-label range-right>90</ion-label>  
+       </ion-range>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>
+      theta
+    </ion-list-header>
+    <ion-item>
+      <ion-range dualKnobs="true" min="0" max="90" pin="true" [(ngModel)]="phi" color="dark">
+          <ion-label range-left>0</ion-label>
+          <ion-label range-right>90</ion-label>
+      </ion-range>
+    </ion-item>
+  </ion-list>
+
+
+  <button ion-button full (click)="sendCMD()"> Send Data </button>
+</ion-content>

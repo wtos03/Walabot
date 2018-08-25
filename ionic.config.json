@@ -1,0 +1,8 @@
+{
+  "name": "Walabot",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "a0352c05"
+}
