@@ -8,10 +8,14 @@
 
 <ion-content>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
     <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
+        <ion-label color="primary" >Walabot IP Address</ion-label>
+        <ion-input [(ngModel)]="wip" type="text" placeholder="ip address"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label color="primary" >Walabot Port</ion-label>
+          <ion-input [(ngModel)]="wport" type="number" placeholder="port"></ion-input>
+        </ion-item>
   </ion-list>
+  <button ion-button full (click)="upDate()"> Update </button>
 </ion-content>

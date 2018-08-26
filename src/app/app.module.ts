@@ -11,6 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
+import { WalabotProvider } from '../providers/walabot/walabot';
 
 // Name space for using multiple socket on same Physical socket  host:port/namespace
 // const config: SocketIoConfig = { url: 'http://192.168.100.140:8089/test', options: {} };
@@ -40,7 +41,8 @@ const config: SocketIoConfig = { url: 'http://localhost:8089', options: {} };
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    WalabotProvider
   ]
 })
 export class AppModule {}
