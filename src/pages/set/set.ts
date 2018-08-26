@@ -26,7 +26,7 @@ export class SetPage {
   }
   sendCMD() {
     this.socket.connect();
-    this.walabot.arena.radiusMax = this.radius.upper;
+    this.walabot.walabotArena.radiusMax = this.radius.upper;
     this.socket.emit('message', this.walabot)
  //   this.navCtrl.push('SocketcomPage', { nickname: this.nickname });
   }       

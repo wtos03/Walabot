@@ -16,6 +16,23 @@
           <ion-label color="primary" >Walabot Port</ion-label>
           <ion-input [(ngModel)]="wport" type="number" placeholder="port"></ion-input>
         </ion-item>
+        <ion-item>
+            <ion-label color="primary" >Radius Resoulution </ion-label>
+            <ion-input [(ngModel)]="radiusres" type="number" placeholder="Radius resolution"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" >Theta Resoulution </ion-label>
+            <ion-input [(ngModel)]="thetares" type="number" placeholder="Theta resolution"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" >Phi Resoulution </ion-label>
+            <ion-input [(ngModel)]="phires" type="number" placeholder="Phi resolution"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" >IFTTT Key </ion-label>
+            <ion-input [(ngModel)]="ifkey" type="text" placeholder="IFTTT key"></ion-input>
+        </ion-item>
+  
   </ion-list>
   <button ion-button full (click)="upDate()"> Update </button>
 </ion-content>

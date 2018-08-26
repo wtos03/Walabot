@@ -9,26 +9,29 @@ import { Injectable } from '@angular/core';
 */
 @Injectable()
 export class WalabotProvider {
-  arena = {
+  walabotArena = {
     radiusMin : 10,
     radiusMax : 100,
     thetaMin  : -45,
     thetaMax  : 45,
     phiMin    : -45,
     phiMax    : 45,
+    radiusRes : 2,
+    thetaRes  : 5,
+    phiRes    : 5,
     mti       : true,
-    threshold : 200,
+    threshold : 200
+  }
+  walabotAddress = {
     ip        : "192.168.100.140",   // Walabot  IP  Address
     port      :  8089
   }
+  walabotAction = {
+    ifKey     : "ADSDSDASDA"
+
+  }
   constructor() {
     console.log('Hello WalabotProvider Provider');
-    this.arena.radiusMax = 100;
-    this.arena.radiusMin = 1;
-  }
-  setipaddress (ipa)
-  {
-    this.arena.ip = ipa;
   }
 
 }
