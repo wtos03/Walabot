@@ -27,8 +27,12 @@ export class WalabotProvider {
     port      :  8089
   }
   walabotAction = {
-    ifKey     : "ADSDSDASDA"
-
+    ifKey     : "ADSDSDASDA",
+    iftttTrig : true,
+    dPort     : true,
+    aPort     : false,
+    repeat    : false,
+    objDectect: "in"
   }
   constructor() {
     console.log('Hello WalabotProvider Provider');

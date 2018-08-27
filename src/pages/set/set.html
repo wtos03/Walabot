@@ -21,28 +21,28 @@
     <ion-list-header>theta</ion-list-header>
     <ion-item>
       <ion-range dualKnobs="true" min="0" max="90" pin="true" [(ngModel)]="theta" color="secondary">
-          <ion-label range-left>0</ion-label>
-          <ion-label range-right>90</ion-label>  
-       </ion-range>
+        <ion-label range-left>0</ion-label>
+        <ion-label range-right>90</ion-label>
+      </ion-range>
     </ion-item>
   </ion-list>
   <ion-list>
     <ion-list-header>phi</ion-list-header>
     <ion-item>
       <ion-range dualKnobs="true" min="0" max="90" pin="true" [(ngModel)]="phi" color="dark">
-          <ion-label range-left>0</ion-label>
-          <ion-label range-right>90</ion-label>
+        <ion-label range-left>0</ion-label>
+        <ion-label range-right>90</ion-label>
       </ion-range>
     </ion-item>
   </ion-list>
   <ion-item>
-      <ion-label>MTI</ion-label>
-      <ion-toggle [(ngModel)]="mti"></ion-toggle>
-    </ion-item>
-    <ion-item>
-        <ion-label color="primary" >Threshold value</ion-label>
-        <ion-input [(ngModel)]="threshold" type="number" placeholder="Threshold value"></ion-input>
-      </ion-item>
+    <ion-label>MTI</ion-label>
+    <ion-toggle [(ngModel)]="mti"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary">Threshold value</ion-label>
+    <ion-input [(ngModel)]="threshold" type="number" placeholder="Threshold value"></ion-input>
+  </ion-item>
 
   <button ion-button full (click)="sendCMD()"> Send Data </button>
 </ion-content>
