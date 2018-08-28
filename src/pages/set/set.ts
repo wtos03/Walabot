@@ -10,24 +10,31 @@ import { WalabotProvider } from '../../providers/walabot/walabot';
 })
 export class SetPage {
   
- /* wallabot = {
-       radiusMin : 10,
-       radiusMax : 100
-  }
-  */
+ 
   radius: any = { lower: 1, upper: 100 };
   theta: any = { lower: 0, upper: 90 };
   phi: any = { lower: 0, upper: 90 };
-  mti = true;
-  threshold: number;
+  mti       : true;
+  threshold : 200;
+
+  jsontext: string;
   
   constructor(public navCtrl: NavController, public socket: Socket, public walabot: WalabotProvider ) {
 
   }
   sendCMD() {
+
     this.socket.connect();
+    this.walabot.walabotArena.radiusMin = this.radius.lower;
     this.walabot.walabotArena.radiusMax = this.radius.upper;
-    this.socket.emit('message', this.walabot)
+    this.walabot.walabotArena.phiMin  = this.phi.lower;
+    this.walabot.walabotArena.phiMax  = this.phi.upper;
+    this.walabot.walabotArena.thetaMin = this.theta.lower;
+    this.walabot.walabotArena.thetaMax = this.theta.upper;
+    this.walabot.walabotArena.mti = this.mti;
+    this.walabot.walabotArena.threshold = this.threshold;
+    this.jsontext = JSON.stringify(this.walabot)
+    this.socket.emit('message', this.jsontext)
  //   this.navCtrl.push('SocketcomPage', { nickname: this.nickname });
   }       
 

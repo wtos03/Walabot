@@ -7,6 +7,8 @@ import { Injectable } from '@angular/core';
   See https://angular.io/guide/dependency-injection for more info on providers
   and Angular DI.
 */
+
+
 @Injectable()
 export class WalabotProvider {
   walabotArena = {
@@ -27,15 +29,16 @@ export class WalabotProvider {
     port      :  8089
   }
   walabotAction = {
-    ifKey     : "ADSDSDASDA",
+    ifKey     : "cHnv9dt3W9X6bmF2vXn2r1",
     iftttTrig : true,
     dPort     : true,
     aPort     : false,
     repeat    : false,
     objDectect: "in"
   }
+  //constructor(public http: HttpClient) {
   constructor() {
-    console.log('Hello WalabotProvider Provider');
+      console.log('Hello WalabotProvider Provider');
   }
 
 }

@@ -15,7 +15,10 @@ import { WalabotProvider } from '../providers/walabot/walabot';
 
 // Name space for using multiple socket on same Physical socket  host:port/namespace
 // const config: SocketIoConfig = { url: 'http://192.168.100.140:8089/test', options: {} };
-const config: SocketIoConfig = { url: 'http://localhost:8089', options: {} };
+
+//const config: SocketIoConfig = { url: 'http://localhost:8089', options: {} };
+
+const config: SocketIoConfig = { url: 'http://192.168.100.140:8089', options: {} };
 
 @NgModule({
   declarations: [

@@ -25,7 +25,7 @@
 
   <ion-list radio-group [(ngModel)]="repeat">
     <ion-list-header>
-      Trigger 
+      Trigger
     </ion-list-header>
     <ion-item>
       <ion-label>Once</ion-label>
@@ -37,17 +37,26 @@
     </ion-item>
   </ion-list>
   <ion-list radio-group [(ngModel)]="detectobj">
-      <ion-list-header>
-        Condition Check
-      </ion-list-header>
-      <ion-item>
-        <ion-label>Object Detect</ion-label>
-        <ion-radio value="in"></ion-radio>
-      </ion-item>
-      <ion-item>
-        <ion-label>Object Missing</ion-label>
-        <ion-radio value="out"></ion-radio>
-      </ion-item>
-    </ion-list>
-    <button ion-button full (click)="apply()"> Apply </button>
+    <ion-list-header>
+      Condition Check
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Object Detect</ion-label>
+      <ion-radio value="in"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Object Missing</ion-label>
+      <ion-radio value="out"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Increase Object Energy</ion-label>
+      <ion-radio value="increaseEnergy"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Decrease Object Energy</ion-label>
+      <ion-radio value="decreaseEnergy"></ion-radio>
+    </ion-item>
+
+  </ion-list>
+  <button ion-button full (click)="apply()"> Apply </button>
 </ion-content>

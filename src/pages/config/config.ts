@@ -13,7 +13,7 @@ export class ConfigPage {
   radiusres = 2;
   thetares = 5;
   phires = 5;
-  ifkey = "DDFCDDFFS";
+  ifkey = "cHnv9dt3W9X6bmF2vXn2r1";
   
   constructor(public navCtrl: NavController, public walabot: WalabotProvider) {
 
