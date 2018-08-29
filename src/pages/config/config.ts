@@ -25,8 +25,10 @@ export class ConfigPage {
         this.walabot.walabotArena.phiRes  = this.phires;
         this.walabot.walabotArena.thetaRes = this.thetares;
         this.walabot.walabotAction.ifKey = this.ifkey;
-        
-
+  }
+  ionViewWillLeave()
+  {
+    this.upDate();
   }
 
 }

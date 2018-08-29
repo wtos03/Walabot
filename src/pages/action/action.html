@@ -13,12 +13,12 @@
       <ion-toggle [(ngModel)]="tifttt"></ion-toggle>
     </ion-item>
     <ion-item>
-      <ion-label>Raspberry Digital Port</ion-label>
-      <ion-toggle [(ngModel)]="dport"></ion-toggle>
+      <ion-label>Raspberry Digital Port A</ion-label>
+      <ion-toggle [(ngModel)]="aport"></ion-toggle>
     </ion-item>
     <ion-item>
-      <ion-label>Raspberry Analog Port</ion-label>
-      <ion-toggle [(ngModel)]="aport"></ion-toggle>
+      <ion-label>Raspberry Digital Port B</ion-label>
+      <ion-toggle [(ngModel)]="dport"></ion-toggle>
     </ion-item>
     <ion-list-header>Condition</ion-list-header>
   </ion-list>
@@ -29,11 +29,11 @@
     </ion-list-header>
     <ion-item>
       <ion-label>Once</ion-label>
-      <ion-radio value=false></ion-radio>
+      <ion-radio value="once"></ion-radio>
     </ion-item>
     <ion-item>
       <ion-label>Repeat</ion-label>
-      <ion-radio value=true></ion-radio>
+      <ion-radio value="repeat"></ion-radio>
     </ion-item>
   </ion-list>
   <ion-list radio-group [(ngModel)]="detectobj">

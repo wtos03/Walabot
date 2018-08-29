@@ -29,8 +29,8 @@
   <ion-list>
     <ion-list-header>phi</ion-list-header>
     <ion-item>
-      <ion-range dualKnobs="true" min="0" max="90" pin="true" [(ngModel)]="phi" color="dark">
-        <ion-label range-left>0</ion-label>
+      <ion-range dualKnobs="true" min="-90" max="90" pin="true" [(ngModel)]="phi" color="dark">
+        <ion-label range-left>-90</ion-label>
         <ion-label range-right>90</ion-label>
       </ion-range>
     </ion-item>
@@ -42,6 +42,10 @@
   <ion-item>
     <ion-label color="primary">Threshold value</ion-label>
     <ion-input [(ngModel)]="threshold" type="number" placeholder="Threshold value"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary">Energy threshold</ion-label>
+    <ion-input [(ngModel)]="enthreshold" type="number" placeholder="Energy Threshold value"></ion-input>
   </ion-item>
 
   <button ion-button full (click)="sendCMD()"> Send Data </button>

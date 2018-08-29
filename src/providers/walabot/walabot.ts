@@ -22,7 +22,8 @@ export class WalabotProvider {
     thetaRes  : 5,
     phiRes    : 5,
     mti       : true,
-    threshold : 200
+    threshold : 30,
+    energythreshold : 100
   }
   walabotAddress = {
     ip        : "192.168.100.140",   // Walabot  IP  Address
@@ -33,8 +34,8 @@ export class WalabotProvider {
     iftttTrig : true,
     dPort     : true,
     aPort     : false,
-    repeat    : false,
-    objDectect: "in"
+    repeat    : "once",
+    objDetect : "in"
   }
   //constructor(public http: HttpClient) {
   constructor() {

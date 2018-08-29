@@ -12,7 +12,7 @@ export class ActionPage {
    tifttt = true;
    dport  = true;
    aport  = false;
-   repeat = false;
+   repeat = "once";
    detectobj = "in";
 
 
@@ -24,8 +24,13 @@ export class ActionPage {
     this.walabot.walabotAction.dPort = this.dport;
     this.walabot.walabotAction.aPort = this.aport;
     this.walabot.walabotAction.repeat = this.repeat;
-    this.walabot.walabotAction.objDectect = this.detectobj;
+    this.walabot.walabotAction.objDetect = this.detectobj;
 
   }
 
+  ionViewWillLeave()
+  {
+    this.apply();
+  }
+  
 }
