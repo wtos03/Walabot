@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Socket } from 'ng-socket-io';
+import { Socket,SocketIoConfig} from 'ng-socket-io';
 import { WalabotProvider } from '../../providers/walabot/walabot';
 
 
@@ -17,13 +17,34 @@ export class SetPage {
   mti       = true;
   threshold = 30;
   enthreshold = 100;
-
   jsontext: string;
-  
-  constructor(public navCtrl: NavController, public socket: Socket, public walabot: WalabotProvider ) {
+  socket: Socket;
+  ip: any;
+  port : any;
+  config: any;
+  address: any;
+ 
+ 
+  constructor(public navCtrl: NavController, public walabot: WalabotProvider ) {
+    
+ // constructor(public navCtrl: NavController, public socket : Socket, public walabot: WalabotProvider ) {
+    
 
+
+      
   }
   sendCMD() {
+    //this.ip = 'localhost';
+   //this.port = 8089;
+
+     this.ip = this.walabot.walabotAddress.ip;
+     this.port = this.walabot.walabotAddress.port;
+    this.address = 'http://'+this.ip+':'+this.port;
+    
+    this.config = {url : this.address, options :  {}};
+    //this.config = {url : 'http://localhost:8089', options :  {}};
+    
+    this.socket = new Socket(this.config);
 
     this.socket.connect();
     this.walabot.walabotArena.radiusMin = this.radius.lower;
@@ -35,8 +56,8 @@ export class SetPage {
     this.walabot.walabotArena.mti = this.mti;
     this.walabot.walabotArena.threshold = this.threshold;
     this.walabot.walabotArena.energythreshold = this.enthreshold;
-    this.jsontext = JSON.stringify(this.walabot)
-    this.socket.emit('message', this.jsontext)
+    this.jsontext = JSON.stringify(this.walabot);
+    this.socket.emit('message', this.jsontext);
  //   this.navCtrl.push('SocketcomPage', { nickname: this.nickname });
   }       
 
