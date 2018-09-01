@@ -9,7 +9,7 @@ import { WalabotProvider } from '../../providers/walabot/walabot';
 })
 export class ActionPage {
 
-   tifttt = true;
+   tifttt = false;
    dport  = true;
    aport  = false;
    repeat = "once";

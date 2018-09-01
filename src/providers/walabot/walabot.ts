@@ -26,12 +26,13 @@ export class WalabotProvider {
     energythreshold : 100
   }
   walabotAddress = {
-    ip        : "192.168.100.140",   // Walabot  IP  Address
+    ip        : "localhost",   // Walabot  IP  Address
+//    ip        : "192.168.100.140",   // Walabot  IP  Address
     port      :  8089
   }
   walabotAction = {
     ifKey     : "cHnv9dt3W9X6bmF2vXn2r1",
-    iftttTrig : true,
+    iftttTrig : false,
     dPort     : true,
     aPort     : false,
     repeat    : "once",

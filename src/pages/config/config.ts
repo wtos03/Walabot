@@ -8,17 +8,20 @@ import { WalabotProvider } from '../../providers/walabot/walabot';
 })
 export class ConfigPage {
 
-  wip = "192.168.100.140";
-  wport = 8089;
+ // wip = "192.168.100.140";
+  wip = this.walabot.walabotAddress.ip;
+  wport = this.walabot.walabotAddress.port;
   radiusres = 2;
   thetares = 5;
   phires = 5;
   ifkey = "cHnv9dt3W9X6bmF2vXn2r1";
+  onlyread = false;
   
   constructor(public navCtrl: NavController, public walabot: WalabotProvider) {
 
   }
   upDate(){
+
         this.walabot.walabotAddress.ip = this.wip;
         this.walabot.walabotAddress.port = this.wport;
         this.walabot.walabotArena.radiusRes = this.radiusres;
@@ -29,6 +32,8 @@ export class ConfigPage {
   ionViewWillLeave()
   {
     this.upDate();
+    this.onlyread = true;
+    
   }
 
 }

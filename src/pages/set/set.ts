@@ -18,34 +18,30 @@ export class SetPage {
   threshold = 30;
   enthreshold = 100;
   jsontext: string;
-  socket: Socket;
+  socket : Socket;
   ip: any;
   port : any;
   config: any;
   address: any;
  
  
-  constructor(public navCtrl: NavController, public walabot: WalabotProvider ) {
-    
+  constructor(public navCtrl: NavController, public walabot: WalabotProvider ) {    
  // constructor(public navCtrl: NavController, public socket : Socket, public walabot: WalabotProvider ) {
     
+  this.ip = this.walabot.walabotAddress.ip;
+  this.port = this.walabot.walabotAddress.port;
+  this.address = 'http://'+this.ip+':'+this.port;
+  this.config = {url : this.address, options :  {}};
+  this.socket = new Socket(this.config);
 
-
-      
   }
+
+  // Need to put socket here. Because we can change the ip:port from config page and connect to new socket
+  // Any problem on memory leak on new Socket ??? don't know just note
+
   sendCMD() {
-    //this.ip = 'localhost';
-   //this.port = 8089;
 
-     this.ip = this.walabot.walabotAddress.ip;
-     this.port = this.walabot.walabotAddress.port;
-    this.address = 'http://'+this.ip+':'+this.port;
-    
-    this.config = {url : this.address, options :  {}};
-    //this.config = {url : 'http://localhost:8089', options :  {}};
-    
-    this.socket = new Socket(this.config);
-
+   
     this.socket.connect();
     this.walabot.walabotArena.radiusMin = this.radius.lower;
     this.walabot.walabotArena.radiusMax = this.radius.upper;
@@ -58,7 +54,10 @@ export class SetPage {
     this.walabot.walabotArena.energythreshold = this.enthreshold;
     this.jsontext = JSON.stringify(this.walabot);
     this.socket.emit('message', this.jsontext);
+  
+// Close connection after send message finish
+//    this.socket.disconnect();
  //   this.navCtrl.push('SocketcomPage', { nickname: this.nickname });
-  }       
+  }     
 
 }

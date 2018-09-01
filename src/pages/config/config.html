@@ -8,31 +8,37 @@
 
 <ion-content>
   <ion-list>
+    <ion-list-header>Walabot Address:Port (Can set once only at startup) </ion-list-header>
     <ion-item>
-        <ion-label color="primary" >Walabot IP Address</ion-label>
-        <ion-input [(ngModel)]="wip" type="text" placeholder="ip address"></ion-input>
+      <ion-label color="primary">IP Address</ion-label>
+      <ion-input [(ngModel)]="wip" type="text" placeholder="ip address" [disabled]="onlyread"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Port</ion-label>
+      <ion-input [(ngModel)]="wport" type="number" placeholder="port" [disabled]="onlyread"></ion-input>
+    </ion-item>
+  </ion-list>
+  
+  <ion-list>
+    <ion-list-header>Arena Resolution</ion-list-header>
+    <ion-item>
+      <ion-label color="primary">Radius </ion-label>
+      <ion-input [(ngModel)]="radiusres" type="number" placeholder="Radius"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Theta </ion-label>
+      <ion-input [(ngModel)]="thetares" type="number" placeholder="Theta"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary">Phi </ion-label>
+        <ion-input [(ngModel)]="phires" type="number" placeholder="Phi"></ion-input>
       </ion-item>
-      <ion-item>
-          <ion-label color="primary" >Walabot Port</ion-label>
-          <ion-input [(ngModel)]="wport" type="number" placeholder="port"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label color="primary" >Radius Resoulution </ion-label>
-            <ion-input [(ngModel)]="radiusres" type="number" placeholder="Radius resolution"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label color="primary" >Theta Resoulution </ion-label>
-            <ion-input [(ngModel)]="thetares" type="number" placeholder="Theta resolution"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label color="primary" >Phi Resoulution </ion-label>
-            <ion-input [(ngModel)]="phires" type="number" placeholder="Phi resolution"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label color="primary" >IFTTT Key </ion-label>
-            <ion-input [(ngModel)]="ifkey" type="text" placeholder="IFTTT key"></ion-input>
-        </ion-item>
+   <ion-item>
+      <ion-label color="primary">IFTTT Key </ion-label>
+      <ion-input [(ngModel)]="ifkey" type="text " placeholder="IFTTT key "></ion-input>
+    </ion-item>
   
   </ion-list>
+
   <button ion-button full (click)="upDate()"> Apply </button>
 </ion-content>

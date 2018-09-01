@@ -9,9 +9,9 @@ import { ActionPage } from '../action/action';
 })
 export class TabsPage {
 
-  tab1Root = SetPage;
+  tab1Root = ConfigPage;
   tab2Root = ActionPage;
-  tab3Root = ConfigPage;
+  tab3Root = SetPage;
 
   constructor() {
 
