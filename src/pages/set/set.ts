@@ -14,9 +14,9 @@ export class SetPage {
   radius: any = { lower: 1, upper: 100 };
   theta: any = { lower: 0, upper: 90 };
   phi: any = { lower: 0, upper: 90 };
-  mti       = true;
-  threshold = 30;
-  enthreshold = 100;
+  mti       = this.walabot.walabotArena.mti;
+  threshold = this.walabot.walabotArena.threshold;
+  enthreshold = this.walabot.walabotArena.energythreshold;
   jsontext: string;
   socket : Socket;
   ip: any;

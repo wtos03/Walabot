@@ -11,9 +11,9 @@ export class ConfigPage {
  // wip = "192.168.100.140";
   wip = this.walabot.walabotAddress.ip;
   wport = this.walabot.walabotAddress.port;
-  radiusres = 2;
-  thetares = 5;
-  phires = 5;
+  radiusres = this.walabot.walabotArena.radiusRes;
+  thetares = this.walabot.walabotArena.thetaRes;
+  phires = this.walabot.walabotArena.phiRes;
   ifkey = "cHnv9dt3W9X6bmF2vXn2r1";
   onlyread = false;
   

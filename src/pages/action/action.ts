@@ -9,11 +9,11 @@ import { WalabotProvider } from '../../providers/walabot/walabot';
 })
 export class ActionPage {
 
-   tifttt = false;
-   dport  = true;
-   aport  = false;
-   repeat = "once";
-   detectobj = "in";
+   tifttt = this.walabot.walabotAction.iftttTrig;
+   dport  = this.walabot.walabotAction.dPort;
+   aport  = this.walabot.walabotAction.aPort;
+   repeat =  this.walabot.walabotAction.repeat;
+   detectobj = this.walabot.walabotAction.objDetect;
 
 
   constructor(public navCtrl: NavController,public walabot: WalabotProvider) {
