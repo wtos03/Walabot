@@ -14,7 +14,7 @@ export class ConfigPage {
   radiusres = this.walabot.walabotArena.radiusRes;
   thetares = this.walabot.walabotArena.thetaRes;
   phires = this.walabot.walabotArena.phiRes;
-  ifkey = "cHnv9dt3W9X6bmF2vXn2r1";
+  ifkey = this.walabot.walabotAction.ifKey;
   onlyread = false;
   
   constructor(public navCtrl: NavController, public walabot: WalabotProvider) {

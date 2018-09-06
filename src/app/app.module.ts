@@ -10,12 +10,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 import { WalabotProvider } from '../providers/walabot/walabot';
 
-// Name space for using multiple socket on same Physical socket  host:port/namespace
-// const config: SocketIoConfig = { url: 'http://192.168.100.140:8089', options: {} };
-// const config: SocketIoConfig = { url: 'http://localhost:8089', options: {} };
 
 @NgModule({
   declarations: [
@@ -27,7 +23,6 @@ import { WalabotProvider } from '../providers/walabot/walabot';
   ],
   imports: [
     BrowserModule,
-  // SocketIoModule.forRoot(config),  
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

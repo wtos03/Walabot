@@ -23,7 +23,7 @@ export class WalabotProvider {
     phiRes    : 5,
     mti       : true,
     threshold : 30,
-    energythreshold : 100
+    energythreshold : 10000
   }
   walabotAddress = {
 //    ip        : "localhost",   // Walabot  IP  Address

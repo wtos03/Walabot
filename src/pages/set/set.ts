@@ -55,9 +55,6 @@ export class SetPage {
     this.jsontext = JSON.stringify(this.walabot);
     this.socket.emit('message', this.jsontext);
   
-// Close connection after send message finish
-//    this.socket.disconnect();
- //   this.navCtrl.push('SocketcomPage', { nickname: this.nickname });
   }     
 
 }
