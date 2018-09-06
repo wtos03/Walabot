@@ -31,7 +31,7 @@ export class WalabotProvider {
     port      :  8089
   }
   walabotAction = {
-    ifKey     : "cHnv9dt3W9X6bmF2vXn2r1",
+    ifKey     : "IFTTT KEY",
     iftttTrig : false,
     dPort     : true,
     aPort     : false,
