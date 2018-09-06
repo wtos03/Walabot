@@ -13,7 +13,7 @@ import { Injectable } from '@angular/core';
 export class WalabotProvider {
   walabotArena = {
     radiusMin : 10,
-    radiusMax : 100,
+    radiusMax : 50,
     thetaMin  : -45,
     thetaMax  : 45,
     phiMin    : -45,
@@ -31,7 +31,7 @@ export class WalabotProvider {
     port      :  8089
   }
   walabotAction = {
-    ifKey     : "IFTTT KEY",
+    ifKey     : "cHnv9dt3W9X6bmF2vXn2r1",
     iftttTrig : false,
     dPort     : true,
     aPort     : false,

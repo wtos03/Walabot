@@ -11,9 +11,9 @@ import { WalabotProvider } from '../../providers/walabot/walabot';
 export class SetPage {
   
  
-  radius: any = { lower: 1, upper: 100 };
-  theta: any = { lower: 0, upper: 90 };
-  phi: any = { lower: 0, upper: 90 };
+  radius: any = { lower: this.walabot.walabotArena.radiusMin, upper: this.walabot.walabotArena.radiusMax };
+  theta: any = { lower: this.walabot.walabotArena.thetaMin, upper: this.walabot.walabotArena.thetaMax };
+  phi: any = { lower: this.walabot.walabotArena.phiMin, upper: this.walabot.walabotArena.phiMax };
   mti       = this.walabot.walabotArena.mti;
   threshold = this.walabot.walabotArena.threshold;
   enthreshold = this.walabot.walabotArena.energythreshold;
